@@ -1,0 +1,28 @@
+.container{
+    background-color: rgb(75, 107, 14);
+    display: flex;    
+    width: 100vw;
+    
+}
+
+nav{
+    display: flex;
+    align-items: CENTER;
+}
+
+ul{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+ul > li:nth-child(2){
+    margin-right: 20px;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

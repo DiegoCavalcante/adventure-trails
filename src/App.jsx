@@ -1,4 +1,5 @@
 import CardTrilha from './components/CardTrilha'
+import Header from './components/Header'
 import useFetch from './hooks/useFetch'
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
   //console.log(dados.usuarios)
   return (
     <>
+      <Header />
       { !loading && dados !== null && dados.usuarios.map((item, index) => (
         <CardTrilha dadosTrilha={item} key={index} />
       ))
