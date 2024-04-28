@@ -1,5 +1,8 @@
 import CardTrilha from './components/CardTrilha'
+import useFetch from './hooks/useFetch'
 function App() {
+
+  const [dados, loading] = useFetch("/db.json")
   const listaTrilhas = [
     {
       nomeTrilha: 'Trilha da Costa da Lagoa',
@@ -13,11 +16,10 @@ function App() {
       urlImagem: 'https://images.pexels.com/photos/20216289/pexels-photo-20216289/free-photo-of-panorama-vista-paisagem-pessoas.jpeg'
     },
   ]
-
+  //console.log(dados.usuarios)
   return (
     <>
-      {
-      listaTrilhas.map((item, index) => (
+      { !loading && dados !== null && dados.usuarios.map((item, index) => (
         <CardTrilha dadosTrilha={item} key={index} />
       ))
       }
