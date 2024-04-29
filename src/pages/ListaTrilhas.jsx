@@ -1,12 +1,15 @@
-import useFetch from '../hooks/useFetch'
+import {UsuariosContext} from '../context/UsuariosContext'
 import CardTrilha from '../components/CardTrilha'
-
+import { useContext } from 'react'
 function ListaUsuarios(){
-    const [dados, loading] = useFetch("/db.json")
+    const {usuarios, setUsuarios, loading} =  useContext(UsuariosContext)
     return (
+        
         <div>
+            
              <h1>Lista Trilhas</h1>
-        { !loading && dados !== null && dados.usuarios.map((item, index) => (
+             
+        { !loading && usuarios !== null && usuarios.map((item, index) => (
             <CardTrilha dadosTrilha={item} key={index} />
           ))
         }

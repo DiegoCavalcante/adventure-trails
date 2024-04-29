@@ -2,7 +2,7 @@
 import {createBrowserRouter} from 'react-router-dom'
 import Home from '../pages/Home.jsx'
 import App from '../App.jsx'
-import CadastroTrilhas from '../pages/CadastroTrilhas.jsx'
+import CadastroTrilhas from '../pages/CadastroTrilhas.jsx' 
 import ListaTrilhas from '../pages/ListaTrilhas.jsx'
 const routers = createBrowserRouter([
     {
@@ -10,7 +10,7 @@ const routers = createBrowserRouter([
         element: <App />,
         children:[
             {
-                path: '/home',
+                path: '/',
                 element: <Home/>
             },
             {
@@ -18,7 +18,7 @@ const routers = createBrowserRouter([
                 element: <CadastroTrilhas/>
             },
             {
-                path: '/',
+                path: '/lista-trilhas',
                 element: <ListaTrilhas/>
             }
         ]

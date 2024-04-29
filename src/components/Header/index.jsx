@@ -6,8 +6,9 @@ function Header(){
     return (
         <div className={styles.container}>            
             <nav>
-                <Link to='/home'>Home</Link>
+                <Link to='/'>Adventure Trails</Link>
                 <Link to='/cadastro'>Cadastro</Link>
+                <Link to='/lista-trilhas'>Explorar Trilhas</Link>
                 
             </nav>
         </div>
